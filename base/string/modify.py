@@ -1,0 +1,13 @@
+a = "Hello, World!"
+print(a.upper())
+print(a.lower())
+print(a.capitalize())
+print(a.title())
+print(a.swapcase())
+print(a.replace("H", "J"))
+print(a.strip())
+print(a.lstrip())
+print(a.rstrip())
+print(a.split(","))
+print(a.split(" "))
+print(a.split("o"))
