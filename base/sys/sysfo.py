@@ -183,7 +183,7 @@ def window():
     sys.exit(app.exec_())
 
 def itson():
-    print("Show System Information")
+    print("Showing System Information")
 
 
 if __name__ == "__main__":
