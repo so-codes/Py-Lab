@@ -9,7 +9,10 @@ import re
 import matplotlib.pyplot as plt
 import numpy as np
 
-import tkinter as tk
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import pyqtSlot
 
 def get_size(bytes, suffix="B"):
     """
@@ -105,86 +108,60 @@ def System_information():
         print(f"  Percentage: {partition_usage.percent}%")
 
 
-    def cpuusage():
-        cpuusage = np.array(psutil.cpu_percent(interval=1, percpu=True))
-        labels = [f"Core {i}" for i in range(len(cpuusage))]
-        plt.title("CPU Usage")
-        plt.pie(cpuusage, labels=labels, autopct="%1.1f%%")
-        plt.show()
+def cpuusage():
+    cpuusage = np.array(psutil.cpu_percent(interval=1, percpu=True))
+    labels = [f"Core {i}" for i in range(len(cpuusage))]
+    plt.title("CPU Usage")
+    plt.pie(cpuusage, labels=labels, autopct="%1.1f%%")
+    plt.show()
 
-    def cpuchart():
-        cpuchart = np.array([cpufreq.max, cpufreq.min, cpufreq.current])
-        labels = ['Max', 'Min', 'Current']
-        plt.title('CPU Frequency')
-        plt.pie(cpuchart, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
-        plt.show() 
+def cpuchart():
+    cpuchart = np.array([cpufreq.max, cpufreq.min, cpufreq.current])
+    labels = ['Max', 'Min', 'Current']
+    plt.title('CPU Frequency')
+    plt.pie(cpuchart, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+    plt.show() 
 
-    window=tk.Tk()
-    window.title("System Information")
-    window.geometry("400x700")
-    newlabel=tk.Label(window, text="System Information")
-    newlabel.grid(column=0, row=0)
-    newlabel=tk.Label(window, text="System: "+uname.system)
-    newlabel.grid(column=0, row=1)
-    newlabel=tk.Label(window, text="Node Name: "+uname.node)
-    newlabel.grid(column=0, row=2)
-    newlabel=tk.Label(window, text="Release: "+uname.release)
-    newlabel.grid(column=0, row=3)
-    newlabel=tk.Label(window, text="Version: "+uname.version)
-    newlabel.grid(column=0, row=4)
-    newlabel=tk.Label(window, text="Machine: "+uname.machine)
-    newlabel.grid(column=0, row=5)
-    newlabel=tk.Label(window, text="Processor: "+uname.processor)
-    newlabel.grid(column=0, row=6)
-    newlabel=tk.Label(window, text="Ip-Address: "+socket.gethostbyname(socket.gethostname()))
-    newlabel.grid(column=0, row=7)
-    newlabel=tk.Label(window, text="Mac-Address: "+':'.join(re.findall('..', '%012x' % uuid.getnode())))
-    newlabel.grid(column=0, row=8)
-    newlabel=tk.Label(window, text="Boot Time: "+str(bt.year)+"/"+str(bt.month)+"/"+str(bt.day)+" "+str(bt.hour)+":"+str(bt.minute)+":"+str(bt.second))
-    newlabel.grid(column=0, row=9)
-    newlabel=tk.Label(window, text="Physical Cores: "+str(psutil.cpu_count(logical=False)))
-    newlabel.grid(column=0, row=10)
-    newlabel=tk.Label(window, text="Total Cores: "+str(psutil.cpu_count(logical=True)))
-    newlabel.grid(column=0, row=11)
-    newlabel=tk.Label(window, text="Max Frequency: "+str(cpufreq.max))
-    newlabel.grid(column=0, row=12)
-    newlabel=tk.Label(window, text="Min Frequency: "+str(cpufreq.min))
-    newlabel.grid(column=0, row=13)
-    newlabel=tk.Label(window, text="Current Frequency: "+str(cpufreq.current))
-    newlabel.grid(column=0, row=14)
-    newlabel=tk.Label(window, text="Total CPU Usage: "+str(psutil.cpu_percent()))
-    newlabel.grid(column=0, row=15)
-    newlabel=tk.Label(window, text="Memory Information")
-    newlabel.grid(column=0, row=16)
-    newlabel=tk.Label(window, text="Total: "+str(get_size(svmem.total)))
-    newlabel.grid(column=0, row=17)
-    newlabel=tk.Label(window, text="Available: "+str(get_size(svmem.available)))
-    newlabel.grid(column=0, row=18)
-    newlabel=tk.Label(window, text="Used: "+str(get_size(svmem.used)))
-    newlabel.grid(column=0, row=19)
-    newlabel=tk.Label(window, text="Percentage: "+str(svmem.percent)+"%")
-    newlabel.grid(column=0, row=20)
-    newlabel=tk.Label(window, text="Swap Information")
-    newlabel.grid(column=0, row=21)
-    newlabel=tk.Label(window, text="Total: "+str(get_size(swap.total)))
-    newlabel.grid(column=0, row=22)
-    newlabel=tk.Label(window, text="Free: "+str(get_size(swap.free)))
-    newlabel.grid(column=0, row=23)
-    newlabel=tk.Label(window, text="Used: "+str(get_size(swap.used)))
-    newlabel.grid(column=0, row=24)
-    newlabel=tk.Label(window, text="Percentage: "+str(swap.percent)+"%")
-    newlabel.grid(column=0, row=25)
-    newlabel=tk.Label(window, text="Disk Information")
-    newlabel.grid(column=0, row=26)
-    newlabel=tk.Label(window, text="Uptime: "+str(datetime.now() - bt))
-    newlabel.grid(column=0, row=27)
+def window():
+    app = QApplication(sys.argv)
+    window = QWidget()
+    window.setWindowTitle("System Information")
+    window.setGeometry(100, 100, 1000, 500)
+    window.setWindowIcon(QIcon("icon.png"))
 
-    button = tk.Button(window, text="Cpu Usage", command=lambda: cpuusage())
-    button.grid(column=0, row=28)
-    button = tk.Button(window, text="Cpu Chart", command=lambda: cpuchart())
-    button.grid(column=0, row=29)
+    btn = QPushButton(window)
+    btn.setText("Show System Information")
+    btn.move(325, 50)
+    btn.clicked.connect(System_information)
 
-    window.mainloop()
+    label = QLabel(window)
+    label.setText("System Information")
+    label.move(50, 100)
+    
+    sysinfo = QLabel(window)
+    sysinfo.setText("Node name: " + platform.node() + "\n" + "System: " + platform.system() + "\n" + "Release: " + platform.release() + "\n" + "Version: " + platform.version() + "\n" + "Machine: " + platform.machine() + "\n" + "Processor: " + platform.processor() + "\n" + "Ip-Address: " + socket.gethostbyname(socket.gethostname()) + "\n" + "Mac-Address: " + ':'.join(re.findall('..', '%012x' % uuid.getnode())))
+    sysinfo.move(50, 150)
+
+    bootinfo = QLabel(window)
+    bootinfo.setText("Boot Time: " + str(datetime.fromtimestamp(psutil.boot_time())) + "\n" + "Up Time: " + str(datetime.now() - datetime.fromtimestamp(psutil.boot_time())))
+    bootinfo.move(500, 150)
+
+    cpuinfo = QLabel(window)
+    cpuinfo.setText("Physical cores: " + str(psutil.cpu_count(logical=False)) + "\n" + "Total cores: " + str(psutil.cpu_count(logical=True)) + "\n" + "Max Frequency: " + str(cpufreq.max) + "\n" + "Min Frequency: " + str(cpufreq.min) + "\n" + "Current Frequency: " + str(cpufreq.current))
+    cpuinfo.move(50, 300)
+
+    meminfo = QLabel(window)
+    meminfo.setText("Total: " + str(get_size(psutil.virtual_memory().total)) + "\n" + "Available: " + str(get_size(psutil.virtual_memory().available)) + "\n" + "Used: " + str(get_size(psutil.virtual_memory().used)) + "\n" + "Percentage: " + str(psutil.virtual_memory().percent) + "%")
+    meminfo.move(500, 300)
+
+    swapinfo = QLabel(window)
+    swapinfo.setText("Total: " + str(get_size(psutil.swap_memory().total)) + "\n" + "Free: " + str(get_size(psutil.swap_memory().free)) + "\n" + "Used: " + str(get_size(psutil.swap_memory().used)) + "\n" + "Percentage: " + str(psutil.swap_memory().percent) + "%")
+    swapinfo.move(50, 400)
+
+    window.show()
+    sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     System_information()
+    window()
