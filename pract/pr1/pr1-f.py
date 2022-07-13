@@ -6,8 +6,7 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-print("Enter a number: ")
-number = int(input())
+number = int(input("Enter a number: "))
 
 if number < 0:
     print("Please enter a positive integer")

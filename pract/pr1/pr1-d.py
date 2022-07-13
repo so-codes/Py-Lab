@@ -1,9 +1,8 @@
 # Write a function that reverses the user defined value
 
-print("Enter a value: ")
-value = input()
+value = input("Enter a value: ")
 
 def reverse(value):
-    return value[::-1]
-    
-print(reverse(value))
+    print(value[::-1])
+
+reverse(value)
