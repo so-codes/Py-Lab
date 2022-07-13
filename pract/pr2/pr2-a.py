@@ -8,7 +8,6 @@ def is_vowel(ch):
         print("False")
         return False
 
-print("Enter a character: ")
-char = input()
+char = input("Enter a character: ")
 
 is_vowel(char)

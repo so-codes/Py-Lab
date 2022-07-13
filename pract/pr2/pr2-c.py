@@ -5,13 +5,8 @@ def histogram(list):
     for i in list:
         print(i * "*")
     
-print("Enter num 1: ")
-num1 = int(input())
-
-print("Enter num 2: ")
-num2 = int(input())
-
-print("Enter num 3: ")
-num3 = int(input())
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+num3 = int(input("Enter number 3: "))
 
 histogram([num1, num2, num3])

@@ -4,7 +4,6 @@ def length(v):
     print("The length of", v, "is", len(v))
     return len(v)
 
-print("Enter a list or string: ")
-value = input()
+value = input("Enter a list or string: ")
 
 length(value)
