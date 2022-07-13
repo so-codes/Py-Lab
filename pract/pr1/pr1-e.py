@@ -1,7 +1,6 @@
 # Write a function to check the input value is Armstrong and also write the function for Palindrome.
 
-print("Enter a number: ")
-number = int(input())
+number = int(input("Enter a number: "))
 
 def isArmstrong():
     sum = 0
