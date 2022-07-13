@@ -3,7 +3,10 @@
 print("Enter a number: ")
 number = int(input())
 
-if number % 2 == 0:
-    print("The number is even")
-else:
-    print("The number is odd")
+def num_type(number):
+    if number % 2 == 0:
+        print("The number is even")
+    else:
+        print("The number is odd")
+
+num_type(number)
