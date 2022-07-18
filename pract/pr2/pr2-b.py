@@ -1,9 +1,13 @@
 # Define a function that computes the length of a given list or string.
 
-def length(v):
-    print("The length of", v, "is", len(v))
+def lengthStr(v):
     return len(v)
 
-value = input("Enter a list or string: ")
+def lengthList(b):
+    return len(b)
 
-length(value)
+value = input("Enter a string: ")
+print("The length of string", lengthStr(value))
+
+l1 = [10, "pog", 39.23]
+print("The length of list is: ", lengthList(l1))
