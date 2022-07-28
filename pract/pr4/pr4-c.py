@@ -1,10 +1,19 @@
 # Write a Python program to clone or copy a list
 
-def clone_list(list):
-    return list[:]
+l1 = []
+for i in range(5):
+    print("Enter element", i + 1, ":", end="")
+    element = input()
+    l1.append(element)
 
-list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print("cloned list: ", clone_list(list))
+print("Original list: ", l1)
 
-list.append(11)  # appended to the original list just to confirm the copy
-print("original list: ", list)
+
+def copy_list(l1):
+    l2 = l1.copy()
+    l1.append(10)
+    print("Original list after append: ", l1)
+    print("Copied list: ", l2)
+
+
+copy_list(l1)
