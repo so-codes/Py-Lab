@@ -1,17 +1,19 @@
 # Write a Python program to sum all the items in a dictionary
 
-dict = {
-    'a': 1, 
-    'b': 2, 
-    'c': 3,
-    'd': 4,
-    'e': 5,
-}
+oi = print
 
-def sum_dict(dict):
-    sum = 0
-    for key, value in dict.items():
-        sum += value
-    return sum
+dict1 = dict()
+no = int(input("How many key values do u wish to have: "))
 
-print(sum_dict(dict))
+for i in range(no):
+    data = input("Enter key & value for dict1 :")
+    temp = data.split(":")
+    dict1[temp[0]] = int(temp[1])
+
+def sum_dict(di):
+    sum_di = 0
+    for key, value in di.items():
+        sum_di += value
+    return 'Sum of dict is :', sum_di
+
+oi(sum_dict(dict1))

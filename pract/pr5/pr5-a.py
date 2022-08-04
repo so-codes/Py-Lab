@@ -1,15 +1,13 @@
 # Write a Python script to sort (ascending and descending) a dictionary by value.
 
-def ascending(n):
-    print("Ascending:")
-    for key, value in sorted(n.items()):
-        print(key, value)
+dict1 = dict()
+no = int(input("How many key values do u wish to have: "))
 
+for i in range(no):
+    data = input("Enter player name & goals scored :")
+    temp = data.split(":")
+    dict1[temp[0]] = int(temp[1])
 
-def descending(n):
-    print("Descending:")
-    for key, value in sorted(n.items(), reverse=True):
-        print(key, value)
-
-ascending({'a': 1, 'b': 2, 'c': 3})
-descending({'a': 1, 'b': 2, 'c': 3})
+print("Original dict : ", dict1)
+print("Ascending order : ", sorted(dict1.values()))
+print("Descending order : ", sorted(dict1.values(), reverse=True))
