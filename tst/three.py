@@ -2,17 +2,17 @@
 
 def validate_email(email):
 
-    if email == '@gmail.com':
+    if email.lower() == '@gmail.com' or email.lower() == '@yahoo.com':
         return False
 
-    if len(email) > 7:
-        if email.count("@") == 1:
-            if email.count(".") == 1:
-                return True
+    if email:
+        if(email.lower().endswith('@gmail.com')) or (email.lower().endswith('@yahoo.com')):
+            return True
     return False
 
 print("Enter the email id: ")
 email = input()
+
 if validate_email(email):
     print("Valid email id")
 else:
