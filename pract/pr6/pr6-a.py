@@ -24,7 +24,7 @@ try:
         print("Do you wish to append: ")
         ans = input()
         
-    print("Ty for dding content to the file !")
+    print("Ty for adding content to the file !")
 
 except:
     print(fname + "is not a valid file")
