@@ -7,4 +7,6 @@ def less_than_5(list):
         if i < 5:
             print(i, end=" ")
 
+    print("")
+
 less_than_5(a)
