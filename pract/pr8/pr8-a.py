@@ -1,28 +1,59 @@
-# Inheritance in Python
+class Animal:
+    def __init__(self, species, location):
+     self.species = species
+     self.location = location
+    def printDetails(self):
+     print("Hello! I am a Animal")
+     print("species:", self.species)
+     print("location:", self.location)
 
-from re import X
+class Wild(Animal):
+    def __init__(self, species, location, type, animal):
+     Animal.__init__(self, species, location)
+     self.type = type
+     self.animal = animal
+    def printDetails(self):
+     print("- - - - - - - - - - - - - -")
+     print("Hello! I am a Wild Animal")
+     print("species:", self.species)
+     print("location:", self.location)
+     print("type:", self.type)
+     print("animal:", self.animal)
+
+class Domestic(Animal):
+    def __init__(self, species, location, type, animal):
+     Animal.__init__(self, species, location)
+     self.type = type
+     self.animal = animal
+    def printDetails(self):
+     print("- - - - - - - - - - - - - -")
+     print("Hello! I am a Domestic Animal")
+     print("species:", self.species)
+     print("location:", self.location)
+     print("type:",self.type)
+     print("animal:",self.animal)
+
+class cat(Wild):
+    def __init__(self, species, location, type, animal):
+     Wild.__init__(self, species, location, type, animal)
+    
+    def printDetails(self):
+     print("- - - - - - - - - - - - - -")
+     print("Hello i am a Domesticated Wild Cat")
+     print("species:",self.species)
+     print("location:",self.location)
+     print("type:",self.type)
+     print("animal:",self.animal)
 
 
-class human:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+p1=Animal("Mammal","world")
+p1.printDetails()
 
-    def display(self):
-        print("\nName:", self.name)
-        print("Age:", self.age)
+s1=Wild("Mammal","Africa","wild","Lion")
+s1.printDetails()
 
-class cat(human):
-    def __init__(self, name, age, color):
-        super().__init__(name, age)
-        self.color = color
+b1=Domestic("Mammal","House","domestic","dog")
+b1.printDetails()
 
-    def display(self):
-        super().display()
-        print("Color:", self.color, "\n")
-
-z = human("Criz", 25)
-z.display()
-
-X = cat("Kurizu", 10, "Black")
-X.display()
+m1 =cat("Mammal", "House", "domestic", "Cat")
+m1.printDetails()

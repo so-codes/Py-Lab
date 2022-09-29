@@ -15,5 +15,4 @@ def copy_list(l1):
     print("Original list after append: ", l1)
     print("Copied list: ", l2)
 
-
 copy_list(l1)
