@@ -1,24 +1,29 @@
 # Implement Exception Handling
 
-print("Testing something lul")
-num = int(input("Enter a number: "))
+class Error(Exception): 
+    pass
+class ValueTooSmallError(Error):
+    def __init__(self, arg):
+       self.strerror = arg
+class ValueTooLargeError(Error): # Raised when input value is too large
+    def __init__(self, arg):
+       self.strerror = arg
+# user guesses this number
+number = 15
+# Looping till the number is equal
+while True:
+    try:
+       input_num = int(input("Guess the number by entering the value: "))
+       if input_num < number:
+          raise ValueTooSmallError(
+          "Value entered is smaller than the answer")
+       elif input_num > number:
+          raise ValueTooLargeError("Value entered is larger than the answer")
+       else:
+          break
+    except ValueTooSmallError as e:
+       print("Error message:", e.strerror, "\n")
+    except ValueTooLargeError as e:
+       print("Error message:", e.strerror, "\n")
 
-try:
-    print("{} / {} = {}".format(num, 0, num / 0))
-except ZeroDivisionError:
-    print("Cannot divide by zero")
-except ValueError:
-    print("Invalid input")
-except Exception:
-    print("Invalid input")
-except:
-    print("Something went wrong")
-else:
-    print("No exceptions")
-finally:
-    print("This will run no matter what")
-
-x = "java exception handling is better ngl"
-
-if not type(x) is int:
-  raise TypeError("Only integers are allowed") 
+print("Congratulations you guessed the answer!\U0001f604")

@@ -1,5 +1,5 @@
 # ints
-x = int(3)
+x = int(5)
 y = int(3.0)
 z = int("3")
 
