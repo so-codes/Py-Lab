@@ -33,6 +33,15 @@ print(x)
 x = line.index("i")
 print(x)
 
+x = line.upper()
+print(x)
+
+x = line.lower()
+print(x)
+
+x = line.splitlines()
+print(x)
+
 x = line.isalnum()
 print(x)
 
