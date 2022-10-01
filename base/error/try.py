@@ -6,3 +6,7 @@ except Exception as e:
     print(e)
 except:
     print("Something else went wrong")
+else:
+    print("Nothing went wrong")
+finally:
+    print("The 'try except' is finished")
