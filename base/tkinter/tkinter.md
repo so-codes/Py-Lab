@@ -2,7 +2,7 @@
 Tkinter is a Python binding to the Tk GUI toolkit. It is the standard Python interface to the Tk GUI toolkit, and is Python's de facto standard GUI. Tkinter is included with standard Linux, Microsoft Windows and Mac OS X installs of Python.
 
 ## Widgets
-- Button
+- Button <br>
 If you want to create a button, you can use the Button widget. The Button widget is used to add buttons in your application. The syntax to create a button is given below.
 
     ```python
