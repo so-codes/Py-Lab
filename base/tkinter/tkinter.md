@@ -13,7 +13,7 @@ If you want to create a button, you can use the Button widget. The Button widget
     root.mainloop()
     ```
 
-- Canvas
+- Canvas <br>
 The Canvas widget is used to draw shapes, such as lines, ovals, rectangles, text, and bitmap images. The Canvas widget is useful for drawing graphs and plots, creating graphics editors, and building custom widgets. The syntax to create a canvas is given below.
 
     ```python
@@ -27,7 +27,7 @@ The Canvas widget is used to draw shapes, such as lines, ovals, rectangles, text
     root.mainloop()
     ```
 
-- Checkbutton
+- Checkbutton <br>
 The Checkbutton widget is used to display a number of options as check buttons. The syntax to create a checkbutton is given below.
 
     ```python
@@ -39,7 +39,7 @@ The Checkbutton widget is used to display a number of options as check buttons. 
     root.mainloop()
     ```
 
-- Entry
+- Entry <br>
 The Entry widget is used to accept single-line text strings from a user. The syntax to create an entry is given below.
 
     ```python
@@ -55,7 +55,7 @@ The Entry widget is used to accept single-line text strings from a user. The syn
     root.mainloop()
     ```
 
-- Frame
+- Frame <br>
 The Frame widget is used as a container widget to organize other widgets. The syntax to create a frame is given below.
 
     ```python
@@ -72,7 +72,7 @@ The Frame widget is used as a container widget to organize other widgets. The sy
     root.mainloop()
     ```
 
-- Label
+- Label <br>
 The Label widget is used to provide a single-line caption for another widget. The syntax to create a label is given below.
 
     ```python
@@ -83,7 +83,7 @@ The Label widget is used to provide a single-line caption for another widget. Th
     root.mainloop()
     ```
 
-- Listbox
+- Listbox <br>
 The Listbox widget is used to display a list of items from which a user may select one or more items. The syntax to create a listbox is given below.
 
     ```python
@@ -97,7 +97,7 @@ The Listbox widget is used to display a list of items from which a user may sele
     root.mainloop()
     ```
 
-- Menu
+- Menu <br>
 The Menu widget is used to create a menu bar, a pull-down menu, or a pop-up menu. The syntax to create a menu is given below.
 
     ```python
@@ -122,7 +122,7 @@ The Menu widget is used to create a menu bar, a pull-down menu, or a pop-up menu
     menubar.add_cascade(label="Edit", menu=editmenu)
     ```
     
-- Menubutton
+- Menubutton <br>
 The Menubutton widget is used to display a menu when pressed. The syntax to create a menubutton is given below.
 
     ```python
@@ -140,7 +140,7 @@ The Menubutton widget is used to display a menu when pressed. The syntax to crea
     root.mainloop()
     ```
 
-- Message
+- Message <br>
 The Message widget is used to display multiline text that cannot be edited. The syntax to create a message is given below.
 
     ```python
@@ -151,7 +151,7 @@ The Message widget is used to display multiline text that cannot be edited. The 
     root.mainloop()
     ```
 
-- Radiobutton
+- Radiobutton <br>
 The Radiobutton widget is used to display a number of options as radio buttons. The syntax to create a radiobutton is given below.
 
     ```python
@@ -184,7 +184,7 @@ The Radiobutton widget is used to display a number of options as radio buttons. 
     root.mainloop()
     ```
 
-- Scale
+- Scale <br>
 The Scale widget is used to select a value from a range. The syntax to create a scale is given below.
 
     ```python
@@ -197,7 +197,7 @@ The Scale widget is used to select a value from a range. The syntax to create a 
     root.mainloop()
     ```
 
-- Scrollbar
+- Scrollbar <br>
 The Scrollbar widget is used to provide a scroll bar for another widget. The syntax to create a scrollbar is given below.
 
     ```python
@@ -213,7 +213,7 @@ The Scrollbar widget is used to provide a scroll bar for another widget. The syn
     root.mainloop()
     ```
 
-- Text
+- Text <br>
 The Text widget is used to display multiple lines of text that can be edited. The syntax to create a text is given below.
 
     ```python
@@ -225,7 +225,7 @@ The Text widget is used to display multiple lines of text that can be edited. Th
     mainloop()
     ```
 
-- Toplevel
+- Toplevel <br>
 The Toplevel widget is used to create a new window. The syntax to create a toplevel is given below.
 
     ```python
@@ -236,7 +236,7 @@ The Toplevel widget is used to create a new window. The syntax to create a tople
     top.mainloop()
     ```
 
-- Spinbox
+- Spinbox <br>
 The Spinbox widget is used to select a value from a range of values. The syntax to create a spinbox is given below.
 
     ```python
@@ -247,7 +247,7 @@ The Spinbox widget is used to select a value from a range of values. The syntax 
     root.mainloop()
     ```
 
-- PanedWindow
+- PanedWindow <br>
 The PanedWindow widget is used to create a window with multiple panes. The syntax to create a panedwindow is given below.
 
     ```python
@@ -266,7 +266,7 @@ The PanedWindow widget is used to create a window with multiple panes. The synta
     root.mainloop()
     ```
 
-- LabelFrame
+- LabelFrame <br>
 The LabelFrame widget is used to group related widgets in a frame. The syntax to create a labelframe is given below.
 
     ```python
@@ -279,7 +279,7 @@ The LabelFrame widget is used to group related widgets in a frame. The syntax to
     root.mainloop()
     ```
 
-- MessageBox
+- MessageBox <br>
 The messagebox widget is used to display a message box. The syntax to create a messagebox is given below.
 
     ```python
