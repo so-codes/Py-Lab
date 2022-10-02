@@ -1,5 +1,14 @@
 # Tkinter
-Tkinter is a Python binding to the Tk GUI toolkit. It is the standard Python interface to the Tk GUI toolkit, and is Python's de facto standard GUI. Tkinter is included with standard Linux, Microsoft Windows and Mac OS X installs of Python.
+Tkinter is a standard library in python used for creating Graphical User Interface (GUI) for Desktop Applications. With the help of Tkinter developing desktop applications is not a tough task.
+
+The primary GUI toolkit we will be using is Tk, which is Python's default GUI library.
+
+Users can access Tk from its Python interface called Tkinter (short for Tk interface).
+
+In Python, Tkinter is a standard GUI (graphical user interface) package. Tkinter is
+Python's default GUI module and also the most common way that is used for GUI
+programming in Python. Note that Tkinter is a set of wrappers that implement the Tk
+widgets as Python classes.
 
 ## Widgets
 - Button <br>
