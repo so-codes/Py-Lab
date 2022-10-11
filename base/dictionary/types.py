@@ -17,3 +17,12 @@ thisdict = {
 }
 thisdict.update({"year": 2020})
 print(thisdict)
+
+print("Enter a key: ")
+key = input()
+
+print("Enter a value: ")
+value = input()
+
+thisdict.update({key: value})
+print(thisdict)
