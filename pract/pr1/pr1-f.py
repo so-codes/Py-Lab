@@ -8,9 +8,4 @@ def factorial(n):
 
 number = int(input("Enter a number: "))
 
-if number < 0:
-    print("Please enter a positive integer")
-elif number == 0:
-    print("The factorial of 0 is 1")
-else:
-    print("The factorial of", number, "is:", factorial(number))
+print("Factorial of ", number , "is 1 ") if number == 0 or number == 1 else print(factorial(number))
