@@ -10,6 +10,8 @@ for i in range(no):
     temp = data.split(":")
     dict1[temp[0]] = int(temp[1])
 
+print(dict1)
+
 def sum_dict(di):
     sum_di = 0
     for key, value in di.items():
