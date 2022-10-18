@@ -17,8 +17,8 @@ def isArmstrong():
 isArmstrong()
 
 def isPalindrome():
-    temp = number
     rev = 0
+    temp = number
     while temp > 0:
         digit = temp % 10
         rev = rev * 10 + digit

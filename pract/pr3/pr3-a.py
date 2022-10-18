@@ -7,9 +7,7 @@ def isPangram(sen):
             return False
     return True
 
-
-print("Enter a sentence: ")
-sentence = input()
+sentence = input("Enter a sentence: ")
 
 if(isPangram(sentence)):
     print("\nThe sentence is a pangram")

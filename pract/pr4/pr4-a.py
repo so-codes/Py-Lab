@@ -6,8 +6,7 @@ l1 = []
 print("Enter ", no1, " elements in the l1")
 
 for i in range(no1):
-    print("Enter element ", i + 1, ":", end="")
-    element = input()
+    element = input("Enter element ", i + 1, ":", end="")
     l1.append(element)
 
 print(l1)
@@ -18,8 +17,7 @@ l2 = []
 print("Enter ", no2, " elements in the l2")
 
 for j in range(no2):
-    print("Enter element ", j + 1, ":", end="")
-    element = input()
+    element = input("Enter element ", j + 1, ":", end="")
     l2.append(element)
 
 print(l2)

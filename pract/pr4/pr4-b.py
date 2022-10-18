@@ -4,8 +4,7 @@ l1 = []
 print("Enter 10 elements in the list")
 
 for i in range(10):
-    print("Enter element ", i+1, ":", end="")
-    element = input()
+    element = input("Enter element ", i+1, ":", end="")
     l1.append(element)
 
 print("List before removing elements", l1)

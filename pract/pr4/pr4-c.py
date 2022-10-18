@@ -2,8 +2,7 @@
 
 l1 = []
 for i in range(5):
-    print("Enter element", i + 1, ":", end="")
-    element = input()
+    element = input("Enter element", i + 1, ":", end="")
     l1.append(element)
 
 print("Original list: ", l1)
