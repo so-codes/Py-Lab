@@ -17,13 +17,7 @@ def isArmstrong():
 isArmstrong()
 
 def isPalindrome():
-    rev = 0
-    temp = number
-    while temp > 0:
-        digit = temp % 10
-        rev = rev * 10 + digit
-        temp //= 10
-    if number == rev:
+    if str(number) == str(number)[::-1]:
         print("The number is Palindrome")
     else:
         print("The number is not Palindrome")
