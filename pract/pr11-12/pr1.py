@@ -1,7 +1,6 @@
 import tkinter as tk
-from turtle import width
-fields = 'Last Name', 'First Name', 'Job', 'Country'
 
+fields = 'Last Name', 'First Name', 'Job', 'Country'
 
 def fetch(entries):
     for entry in entries:

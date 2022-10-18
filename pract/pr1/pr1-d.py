@@ -6,3 +6,10 @@ def reverse(value):
     print(value[::-1])
 
 reverse(value)
+
+num = int(input("Enter a number: "))
+
+def reverse(num):
+    print(str(num)[::-1])
+
+reverse(num)
