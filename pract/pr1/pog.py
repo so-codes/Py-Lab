@@ -53,6 +53,24 @@ def facti(num):
 
 print(facti(5))
 
+def sumnum(num):
+    sum = 0
+    for i in range(1, num + 1):
+        sum += i
+    return sum
+
+print(sumnum(2))
+
+
+def fibo(num):
+    a = 0
+    b = 1
+    for i in range(num):
+        print(a, end=" ")
+        a = b
+        b = a + b
+
+fibo(5)
 
 n1 , n2 = 0 , 1
 nterms = int(input("Enter the number of terms: "))
