@@ -13,6 +13,7 @@ print(items)
 
 # display the name of the higst priced sports items in the dictionary
 max_price = max(items.values())
+print(max_price)
 for item, price in items.items():
     if price == max_price:
         print(item)
