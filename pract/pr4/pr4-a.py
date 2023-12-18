@@ -6,7 +6,8 @@ l1 = []
 print("Enter ", no1, " elements in the l1")
 
 for i in range(no1):
-    element = input("Enter element ", i + 1, ":", end="")
+    print("Enter element ", i + 1, ":", end="")
+    element = input()
     l1.append(element)
 
 print(l1)
@@ -17,7 +18,8 @@ l2 = []
 print("Enter ", no2, " elements in the l2")
 
 for j in range(no2):
-    element = input("Enter element ", j + 1, ":", end="")
+    print("Enter element ", j + 1, ":", end="")
+    element = input()
     l2.append(element)
 
 print(l2)
@@ -33,6 +35,7 @@ def common_el(list1, list2):
 
     for z in arg1:
         if z in arg2:
+            print("Common element is:", z)
             return True
     return False
 

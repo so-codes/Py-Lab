@@ -23,3 +23,17 @@ def isPalindrome():
         print("The number is not Palindrome")
 
 isPalindrome()
+
+def pali():
+    sum = 0 
+    temp = number
+    while temp > 0:
+        digit = temp % 10
+        sum = sum * 10 + digit
+        temp //= 10
+    if number == sum:
+        print("The number is Palindrome")
+    else:
+        print("The number is not Palindrome")
+
+pali()

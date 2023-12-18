@@ -1,5 +1,5 @@
 thisdict = {}
-r1 = int(input("enter a range: "))
+r1 = int(input("Enter a range: "))
 for i in range(r1):
 
     key = input("Enter a key: ")

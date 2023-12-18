@@ -18,4 +18,4 @@ def read_last_line(file, n):
 
 
 no_lines = int(input("Enter number of lines from the last line you wish to display: "))
-read_last_line('/home/criz/Documents/GitHub/py-up/pract/pr6/pog.txt', no_lines)
+read_last_line('/home/criz/Documents/GitHub/spez/py-up/pract/pr6/pog.txt', no_lines)
